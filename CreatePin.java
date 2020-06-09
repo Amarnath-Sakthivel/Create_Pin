@@ -11,7 +11,7 @@ public class CreatePin {
         int pin;
         int i1,i2,i3;
         String out="";
-
+         /*to find 1000th digit*/
         i1=Math.max(s1.charAt(0),s1.charAt(1));
         i1=Math.max(i1,s1.charAt(2));
 
@@ -26,20 +26,21 @@ public class CreatePin {
 
         pin=Character.getNumericValue(pin);
         out+=pin;
-
+        /*to find 100th digit*/
         pin=Math.min(s1.charAt(0),s2.charAt(0));
         pin=Math.min(pin,s3.charAt(0));
-
         pin=Character.getNumericValue(pin);
         out+=pin;
+        
+        /*to find 10th digit*/
         pin=Math.min(s1.charAt(1),s2.charAt(1));
         pin=Math.min(pin,s3.charAt(1));
-
         pin=Character.getNumericValue(pin);
         out+=pin;
+        
+        /*to find unit digit*/
         pin=Math.min(s1.charAt(2),s2.charAt(2));
         pin=Math.min(pin,s3.charAt(2));
-
         pin=Character.getNumericValue(pin);
         out+=pin;
 
